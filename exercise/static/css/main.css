@@ -108,5 +108,24 @@ clear: both;
 	text-align: left;
 }
 
+#label {
+	border: solid 1px/*線*/
+}
+
+.square_btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 1px #627295;
+    border-radius: 1px;
+}
+.square_btn:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
+
 
 
