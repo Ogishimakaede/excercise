@@ -1,0 +1,112 @@
+﻿*{
+	font-family: 'メイリオ';
+}
+
+html {
+	background: #FC354C;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #0ABFBC, #FC354C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+#top-menu {
+	margin-left : 200px ;
+	margin-right : 200px ;
+	margin-top : 0px ;
+	margin-bottom : 0px ;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+#top-menu li {
+    float: left;
+    border-right: 1px solid gray;
+}
+
+#top-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#top-menu li a:hover {
+    background-color: gray;
+}
+
+h1 {
+	background: linear-gradient(transparent 60%, #FAE438 60%);
+}
+
+h2 {
+	color: #364e96;/*文字色*/
+	padding: 0.5em 0;/*上下の余白*/
+	border-top: solid 3px #364e96;/*上線*/
+	border-bottom: solid 3px #364e96;/*下線*/
+}
+
+#title {
+	font-family: 'Caveat', cursive;
+	margin-left : 200px ;
+	margin-right : 200px ;
+	margin-bottom : 0px ;
+	font-size : 60px;
+	color: #FFFFDD;/*文字色*/
+	text-align: center;
+}
+
+#main {
+	 width: 1000px;
+	 margin-left : 150px ;
+	 margin-right : 150px ;
+     padding : 20px ;
+     background-color : white ;
+}
+
+table {
+	padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.image {
+    width: 480px;
+}
+
+.clothes {
+    height: 400px;
+	text-align: center;
+}
+
+#a-box {
+	width: 500px;
+	float: left;
+}
+
+#b-box {
+	width: 500px;
+	float: right;
+}
+
+.clear {
+clear: both;
+}
+
+#answer {
+	text-align: center;
+}
+
+#text {
+	text-align: left;
+}
+
+
+

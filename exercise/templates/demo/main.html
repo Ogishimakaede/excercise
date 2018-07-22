@@ -1,0 +1,154 @@
+{% load staticfiles %}
+
+<html>
+
+
+
+<head>
+
+  <title>Weather - clothes Assistant</title>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+  
+
+</head>
+
+
+
+<body>
+  {% load static %}
+  <div id="title">Weather - clothes Assistant</div>
+
+  </br>
+  
+  <div id="main">
+	<h1>
+		今日は何℃？毎日の服装は【気温】で判断すれば失敗しないよ！
+    </h1>
+    <p>
+		洋服選びが難しい、季節の変わり目。外に出てから、思ったより暑かったり、寒かったりすることもよくありますよね。そんな時に便利なのが、その日の気温を目安にして服装を決める方法です。これを知っていれば、もうコーディネートに失敗しません♪
+	</p>
+	
+	<form action="" method="get">
+        <label>都市名:<input type="text" size="20" name="cityname"></label>
+        <input type="submit" value="天気を調べる">　英語で入力してください
+		
+    </form>
+	
+	<div id="a-box">
+		<h2 id="answer">
+			{{city}}　最高気温：{{max_temp}}°
+		</h2>
+		{{background | safe}}
+		</br></br>
+		<table>
+		  <tr>
+			<td>天気・・・・・</td>
+			<td>{{weather}}</td>
+		  </tr>
+		  <tr>
+			<td>最高気温・・・</td>
+			<td>{{max_temp}}°</td>
+		  </tr>
+		  <tr>
+			<td>最低気温・・・</td>
+			<td>{{min_temp}}°</td>
+		  </tr>
+		  <tr>
+			<td>湿度・・・・・</td>
+			<td>{{humidity}}%</td>
+		  </tr>
+		</table>
+	</div>
+	
+	<div id="b-box">
+		{% if max_temp >= 26 %}
+			<div id="answer">
+				<h2>暑い！まだまだ半袖が活躍</h2>
+			</div>
+			<div id="text">
+				<p>外に出て、少し歩くと汗ばむ気温なので、トップスは半袖1枚で大丈夫。帽子や日傘、日焼け止めといった紫外線対策もまだまだ必要です。</p>
+			</div>
+			<div id="answer">
+				<img src="/static/exercise/over26.jpg">
+			</div>
+		{% elif max_temp >= 21 %}
+			<div id="answer">
+				<h2>快適♪半袖と長袖の分かれ目</h2>
+			</div>
+			<div id="text">
+				<p>この時期は半袖と長袖の分かれ目です。晴れて日差しがある日は半袖を、曇りや雨で日差しがない日は長袖がおすすめ。</p>
+			</div>
+			<div id="answer">
+				<img src="/static/exercise/over21.jpg">
+			</div>
+		{% elif max_temp >= 16 %}
+			<div id="answer">
+				<h2>やや肌寒い。重ね着が楽しめる時期</h2>
+			</div>
+			<div id="text">
+				<p>ちょっと肌寒いかな？というくらいの過ごしやすい気候。レイヤードスタイルを思いっきり楽しめるシーズンです。</p>
+			</div>
+			<div id="answer">
+				<img src="/static/exercise/over16.jpg">
+			</div>
+		{% elif max_temp >= 12 %}
+			<div id="answer">
+				<h2>寒さがじわじわ。軽めのアウターを用意して</h2>
+			</div>
+			<div id="text">
+				<p>じわじわと寒さが感じられるようになり、そろそろ冬物の出番になってきます。本格的なコートにはまだ早いけれど、軽めのアウターは準備しておきたいところです。</p>
+			</div>
+			<div id="answer">
+				<img src="/static/exercise/over12.jpg">
+			</div>
+		{% elif max_temp >= 7 %}
+			<div id="answer">
+				<h2>もう寒い。そろそろ冬本番</h2>
+			</div>
+			<div id="text">
+				<p>全国平均でいくと11月～12月くらいの気候で、寒さが前面に感じられる時期。冬服の上にコートを羽織ってちょうどいいくらいです。</p>
+			</div>
+			<div id="answer">
+				<img src="/static/exercise/over7.jpg">
+			</div>
+		{% else %}
+			<div id="answer">
+				<h2>凍える寒さ。防寒対策は万全に</h2>
+			</div>
+			<div id="text">
+				<p>気温が6℃以下になると、凍えるほどの寒さになります。冬素材をしっかり重ね着して、あったかインナーやカイロもほしいところです。</p>
+			</div>
+			<div id="answer">
+				<img src="/static/exercise/under6.jpg">
+			</div>
+		{% endif %}
+	</div>
+	<div class="clear"></div>
+
+	
+<!--	{{weather}}</br>
+	{{max_temp}}</br>
+	{{min_temp}}</br>
+	{{humidity}}</br>
+	
+	
+-->
+
+	</br>
+	<h2>
+    </h2>
+  </div>
+  
+
+  
+</body>
+
+
+
+</html>
